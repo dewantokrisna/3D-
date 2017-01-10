@@ -1,0 +1,57 @@
+gltranslatef(0,0,-4)         'translasi (tx, ty, tz)
+glRotatef(30, 0.0, 1.0, 0.0) 'rotasi terhadap sumbu y sebanyak 30 derajat terhadap y
+glColor3f(1,0,0)
+'posisi kamera di (0,0,0)
+Dim kamx# = 3
+Dim kamy# = -3
+Dim kamz# = 0   
+'poisisi titik fokus pandang
+Dim pandangx# = 1
+Dim pandangy# = 2
+Dim pandangz# = -3   
+
+gluLookAt(kamx#,kamy#,kamz#,pandangx#,pandangy#,pandangz#,0,1,0)
+
+glBegin(GL_QUADS) 
+    glVertex3f(1, 1, -1)
+    glVertex3f(-1, 1, -1)
+    glVertex3f(-1, -1, -1)
+    glVertex3f(1, -1, -1)   
+glEnd()                    
+glColor3f(0,1,0)
+glBegin(GL_QUADS) 
+    glVertex3f(1, 1, 1)
+    glVertex3f(-1, 1, 1)
+    glVertex3f(-1, -1, 1)
+    glVertex3f(1, -1, 1)   
+glEnd()      
+glColor3f(0,0,1)
+glBegin(GL_QUADS) 
+    glVertex3f(1, 1, 1)
+    glVertex3f(1, 1, -1)
+    glVertex3f(1, -1,-1)
+    glVertex3f(1, -1, 1)   
+glEnd()                 
+glColor3f(1,1,0)
+glBegin(GL_QUADS) 
+    glVertex3f(-1, 1, 1)
+    glVertex3f(-1, 1, -1)
+    glVertex3f(-1, -1,-1)
+    glVertex3f(-1, -1, 1)   
+glEnd()         
+
+glColor3f(1,0,1)
+glBegin(GL_QUADS) 
+    glVertex3f(-1, -1, 1)
+    glVertex3f(-1, -1, -1)
+    glVertex3f(1, -1,-1)
+    glVertex3f(1, -1, 1)   
+glEnd()
+
+glColor3f(0,1,1)
+glBegin(GL_QUADS) 
+    glVertex3f(-1, 1, 1)
+    glVertex3f(-1, 1, -1)
+    glVertex3f(1, 1,-1)
+    glVertex3f(1, 1, 1)   
+glEnd() 
